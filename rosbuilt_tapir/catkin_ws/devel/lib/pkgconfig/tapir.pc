@@ -1,0 +1,8 @@
+prefix=/home/crazy/Desktop/catkin_ws/devel
+
+Name: tapir
+Description: Description of tapir
+Version: 0.0.0
+Cflags: -I/home/crazy/Desktop/catkin_ws/devel/include -I/home/crazy/Desktop/catkin_ws/src/tapir/src -I/home/crazy/Desktop/catkin_ws/src/tapir/src/options
+Libs: -L/home/crazy/Desktop/catkin_ws/devel/lib -ltapir
+Requires: roscpp roslib std_msgs geometry_msgs tf message_runtime laser_geometry

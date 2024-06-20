@@ -42,7 +42,7 @@ then
     PATCH_PLUGIN=true
 else
     echo "ROS $ROS_VERSION detected."
-    sudo apt-get install libopencv-dev
+    sudo apt-get install -y libopencv-dev
     # New V-REP interface doesn't seem to compile, use old plugin
     DISABLE_OTHER_INTERFACE=true
 fi
@@ -51,7 +51,7 @@ JOY=$(env ROS_CACHE_TIMEOUT=0 rospack list-names | grep joy)
 if [ -z "$JOY" ]
 then
     echo "ROS joystick package not found!"
-    sudo apt-get install ros-$ROS_VERSION-joy
+    sudo apt-get install -y ros-$ROS_VERSION-joy
     JOY=$(env ROS_CACHE_TIMEOUT=0 rospack list-names | grep joy)
     if [ -z "$JOY" ]
     then
